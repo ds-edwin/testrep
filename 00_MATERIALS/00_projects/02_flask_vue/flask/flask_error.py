@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return "<h1>404 Error</h1>", 404
+    return "<h1>404, Please check the URL T.T</h1>", 404
 
 
 @app.route("/google")

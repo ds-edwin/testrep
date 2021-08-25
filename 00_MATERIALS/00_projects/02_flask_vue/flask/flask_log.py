@@ -11,7 +11,9 @@ if not app.debug:
     file_handler.setLevel(logging.WARNING)  # 어느 단계까지 로깅을 할지를 적어줌
     # app.logger.addHandler() 에 등록시켜줘야 app.logger 로 사용 가능
     app.logger.addHandler(file_handler)
-
+    
+    # NTEventLogHandler => 윈도우 계열
+    # SysLogHandler => 유닉스 계열
 
 @app.errorhandler(404)
 def page_not_found(error):
